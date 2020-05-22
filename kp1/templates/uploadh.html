@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns: xmlns: xmlns:font-size="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {%  load static %}
+   <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style>
+
+    lable{
+
+    color:green;
+
+    }
+    .progress {
+  margin: 10px;
+  width: 700px;
+}
+
+</style>
+
+
+</head>
+    <body style="background-color:#2f3542;">
+    <p><center> <b style="color:#009432"font-size:60px;>Upload here Your Hostel details...</b></center> </p>
+
+ <script>
+
+       var audio = new Audio('{% static 'audio/hacked.mp3'%}');
+audio.play();
+
+
+ </script>
+   <form method="post"action=" {% url 'upload' %}"enctype="multipart/form-data">{% csrf_token %}
+  <div class="form-group">
+    <label for="exampleInputEmail11"style="color:green;">Hostel name</label>
+    <input type="text" class="form-control"  name="hostelname" id="exampleInputEmail11" aria-describedby="emailHelp" placeholder="Enter Hostel name"required>
+  </div>
+        <div class="form-group">
+    <label for="exampleInputEmail12"style="color:green;">Address</label>
+    <input type="text" class="form-control" name="address" id="exampleInputEmail12" aria-describedby="emailHelp" placeholder="Enter Address"required>
+  </div>
+
+           <div class="form-group">
+    <label for="exampleInputEmail123"style="color:green;">rate</label>
+    <input type="int" class="form-control"name="rate" id="exampleInputEmail123" aria-describedby="emailHelp" placeholder="Enter Rate"required>
+  </div>
+
+             <div class="form-group">
+    <label for="exampleInputEmail1234"style="color:green;">Discription</label>
+    <input type="text" class="form-control" id="exampleInputEmail1234" name="disc" aria-describedby="emailHelp" placeholder="Enter Discription"required>
+  </div>
+
+  <div class="form-group">
+    <label>Choose File</label>
+    <input type="file" class="form-control"name="file"required>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button><br>
+
+
+
+  </div>
+</div>
+
+</form>
+
+     <p>File uploaded at  link  <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+    
+    <img src="">
+
+    <script>
+
+        var a="{{ upload  }}";
+
+        if(a=='kp')
+        {
+        alert("File upload successfully");
+        }
+
+
+function start(al) {
+  var bar = document.getElementById('progressBar');
+  var status = document.getElementById('status');
+  status.innerHTML = al + "%";
+  bar.value = al;
+  al++;
+  var sim = setTimeout("start(" + al + ")", 1);
+  if (al == 100) {
+    status.innerHTML = "100%";
+    bar.value = 100;
+    clearTimeout(sim);
+    var finalMessage = document.getElementById('finalMessage');
+    finalMessage.innerHTML = "File Uploaded";
+  }
+}
+var amountLoaded = 0;
+
+    </script>
+</body>
+</html>

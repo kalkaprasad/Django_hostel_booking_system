@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="{% url 'emp'%}">{% csrf_token %}
+
+    <h1> Emoloyee Id: {{ form.eid}}</h1>
+
+    <input name="name" class="form-control" placeholder="Full name" type="text">
+<h2>Emp name : {{ form.ename}} </h2>
+ <h3> Email is :{{form.eemail}}</h3>
+    <h4> contact {{ form.econtact }}</h4>
+    <button type="submit"> submit</button>
+
+
+</form>
+
+</body>
+</html>

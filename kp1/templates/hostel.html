@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Search hostel</title>
+  {% load static %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  .jumbotron {
+
+    background: linear-gradient(to bottom, #ad5389 0%, #3c1053 100%);
+    color: #fff;
+  }
+  .mycontainer{
+
+background-color:#ff962d;
+text-color:blue;
+}
+b{
+color:blue;
+
+}
+img{
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+  </style>
+
+
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Are You Seraching Hostel.? </h1>
+  <p>Search Here,Hostel Availblity..</p>
+  <form class="form-inline"method="post"action="{% url 'login' %}">{% csrf_token %}
+    <div class="input-group">
+      <input type="text" class="form-control" size="50" placeholder="Enter Your Location" required>
+      <div class="input-group-btn">
+        <button type="submit" class="btn btn-danger">Search</button>
+      </div>
+    </div>
+  </form>
+
+</div>
+
+
+<section id="service-list">
+        <div class="container">
+             <div class="row" style="margin-bottom:20px;">
+                 <div class="text3">
+               <center> Services</center>
+                </div>
+               <!---1 !-->
+            <div class="col-sm-4">
+                <center>
+               <img src="{% static 'images/a1.jpg'%}" height="125px" width="125px"style=" border-radius: 50%"data-toggle="modal" data-target="#exampleModalCenter"></center><br/>
+                  <div class="text1">
+                      <center><b>3-star hostel</b></center>
+        </div>
+
+
+                 </div>
+                 <div class="col-sm-4">
+                   <center><img src="{% static 'images/a2.jpg'%}"  height="125px" width="125px"style=" border-radius: 50%" data-toggle="modal" data-target="#exampleModalCenter"> </center>
+                  <div class="text1">
+                      <center><b>Roz-villa hostel</b></center>
+        </div>
+
+                 </div>
+                 <div class="col-sm-4">
+                     <center>
+               <img src="{% static 'images/a3.jpg'%}" height="125px" width="125px"style=" border-radius: 50%"data-toggle="modal" data-target="#exampleModalCenter"></center><br/>
+                  <div class="text1">
+                      <center><b>Dangal-hostel</b></center>
+        </div>
+        </div>
+                  <div class="col-sm-4">
+                     <center>
+               <img src="{% static 'images/a3.jpg'%}" height="125px" width="125px"style=" border-radius: 50%"data-toggle="modal" data-target="#exampleModalCenter"></center><br/>
+                  <div class="text1">
+                      <center><b>Ravibhawan-hostel (Kanpur)</b></center>
+        </div>
+        </div>
+                  <div class="col-sm-4">
+                     <center>
+               <img src="{% static 'images/a4.jpg'%}" height="125px" width="125px"style=" border-radius: 50%"data-toggle="modal" data-target="#exampleModalCenter"></center><br/>
+                  <div class="text1">
+           <center><b>3 Gold-hostel (New -Delhi)</b></center>
+        </div>
+        </div>
+                  <div class="col-sm-4">
+                     <center>
+               <img src="{% static 'images/a5.jpg'%}" height="125px" width="125px"style=" border-radius: 50%"data-toggle="modal" data-target="#exampleModalCenter"></center><br/>
+                  <div class="text1">
+          <center><b>Vidyabhawan-hostel (Prayagraj)</b></center>
+        </div>
+        </div>
+
+                  <div class="col-sm-4">
+                     <center>
+               <img src="{% static 'images/a6.jpg'%}" height="125px" width="125px"style=" border-radius: 50%"data-toggle="modal" data-target="#exampleModalCenter"></center><br/>
+                  <div class="text1">
+          <center><b>Rameshwaram-hostel (Bareli)</b></center>
+        </div>
+        </div>
+
+                  <div class="col-sm-4">
+                     <center>
+               <img src="{% static 'images/a7.jpg'%}" height="125px" width="125px"style=" border-radius: 50%"data-toggle="modal" data-target="#exampleModalCenter"></center><br/>
+                  <div class="text1">
+             <center><b>Gojari Bhawan. Girl-hostel (Bathinda)</b></center>
+        </div>
+        </div>
+                  <div class="col-sm-4">
+                     <center>
+               <img src="{% static 'images/a7.jpg'%}" height="125px" width="125px"style=" border-radius: 50%"data-toggle="modal" data-target="#exampleModalCenter"></center><br/>
+                  <div class="text1">
+         <center><b>Bajrangi hostel (Prayagraj)</b></center>
+        </div>
+        </div>
+                  <div class="col-sm-4">
+                     <center>
+               <img src="{% static 'images/a8.jpg'%}" height="125px" width="125px"style=" border-radius: 50%"data-toggle="modal" data-target="#exampleModalCenter"></center><br/>
+                  <div class="text1">
+         <center><b>Rambhawan-hostel (Kanpur)</b></center>
+        </div>
+        </div>   <div class="col-sm-4">
+                     <center>
+               <img src="{% static 'images/a10.jpg'%}" height="125px" width="125px"style=" border-radius: 50%"data-toggle="modal" data-target="#exampleModalCenter"></center><br/>
+                  <div class="text1">
+         <center><b>Nityaram-hostel (Prayagraj)</b></center>
+        </div>
+        </div>   <div class="col-sm-4">
+                     <center>
+               <img src="{% static 'images/a12.jpg'%}" height="125px" width="125px"style=" border-radius: 50%"data-toggle="modal" data-target="#exampleModalCenter"></center><br/>
+                  <div class="text1">
+           <center><b>kabirbangla-hostel (Chandigar)</b></center>
+        </div>
+        </div>   <div class="col-sm-4">
+                     <center>
+               <img src="{% static 'images/a13.jpg'%}" height="125px" width="125px"style=" border-radius: 50%"data-toggle="modal" data-target="#exampleModalCenter"></center><br/>
+                  <div class="text1">
+         <center><b>RaviBabu-hostel (Hydrabad)</b></center>
+        </div>
+        </div>   <div class="col-sm-4">
+                     <center>
+               <img src="{% static 'images/a14.jpg'%}" height="125px" width="125px"style=" border-radius: 50%"data-toggle="modal" data-target="#exampleModalCenter"></center><br/>
+                  <div class="text1">
+          <center><b>Triveni -hostel (Noida)</b></center>
+        </div>
+        </div>   <div class="col-sm-4">
+                     <center>
+               <img src="{% static 'images/a15.jpg'%}" height="125px" width="125px"style=" border-radius: 50%"data-toggle="modal" data-target="#exampleModalCenter"></center><br/>
+                  <div class="text1">
+           <center><b>5 star-hostel (Ludhiyana)</b></center>
+        </div>
+        </div>   <div class="col-sm-4">
+                     <center>
+               <img src="{% static 'images/a17.jpg'%}" height="125px" width="125px"style=" border-radius: 50%"data-toggle="modal" data-target="#exampleModalCenter"></center><br/>
+                  <div class="text1">
+                   <center><b>Shitabhawan Girl-hostel (Prayagraj)</b></center>
+        </div>
+        </div>   <div class="col-sm-4">
+                     <center>
+               <img src="{% static 'images/a16.jpg'%}" height="125px" width="125px"style=" border-radius: 50%"data-toggle="modal" data-target="#exampleModalCenter"></center><br/>
+                  <div class="text1">
+                    <center><b>Vila boyes Hostel -Lucknow</b></center>
+        </div>
+        </div>   <div class="col-sm-4">
+                     <center>
+               <img src="{% static 'images/a8.jpg'%}" height="125px" width="125px"style=" border-radius: 50%"data-toggle="modal" data-target="#exampleModalCenter"></center><br/>
+                  <div class="text1">
+            <center><b>Vila boyes Hostel -Lucknow</b></center>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+            </div>
+             </div>
+               <hr/>
+        </section>
+
+
+
+
+  <!-- Footer -->
+	<section id="footer">
+		<div class="mycontainer">
+			<div class="row text-center text-xs-center text-sm-left text-md-left blue">
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5 style="color:white;">Quick Support</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="javascript:void();" style="color:white;"><i class="fa fa-angle-double-right"></i>Search</a></li>
+						<li><a href="javascript:void();" style="color:white;"><i class="fa fa-angle-double-right" style="color:white;"></i>About</a></li>
+						<li><a href="javascript:void();" style="color:white;"><i class="fa fa-angle-double-right" style="color:white;"></i>Registraion</a></li>
+						<li><a href="javascript:void();" style="color:white;"><i class="fa fa-angle-double-right" style="color:white;"></i>Affilate</a></li>
+						<li><a href="javascript:void();" style="color:white;"><i class="fa fa-angle-double-right" style="color:white;"></i>Gallery</a></li>
+					</ul>
+				</div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+        <h5 style="color:white;"> Social media</h5>
+             <ul> <ul class="list-unstyled quick-links">
+                    <li> <a href="#"style="color:white;"> facebook</a> </li>
+                  <li> <a href="#"style="color:white;"> Twitter</a> </li>
+                  <li> <a href="#"style="color:white;"> Instrgram</a> </li>
+                  <li> <a href="#"style="color:white;"> Youtube</a> </li>
+                    </ul>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+					<h5 style="color:white;">Our team</h5>
+					<ul class="list-unstyled quick-links">
+                        <li><a href="javascript:void();"style="color:white;"><i class="fa fa-angle-double-right"></i> Costumer service</a></li>
+						<li><a href="javascript:void();"style="color:white;"><i class="fa fa-angle-double-right"style="color:white;"></i>Custmer care</a></li>
+						<li><a href="javascript:void();"style="color:white;"><i class="fa fa-angle-double-right"style="color:white;"></i>Mangeement team</a></li>
+						<li><a href="javascript:void();"style="color:white;"><i class="fa fa-angle-double-right"style="color:white;"></i>Home custumer care</a></li>
+						<li><a href="javascript:void();"style="color:white;"><i class="fa fa-angle-double-right"style="color:white;"></i>Food costumer care</a></li>
+					</ul>
+				</div>
+
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+					<p><u><a href="#"> <p>this website made by  kp singh.</p>
+					<p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="#" target="_blank">Bookmyhostel</a></p>
+                        </a>
+                        </u>
+				</div>
+                </div>
+			</div>
+		</div>
+	</section>
+	<!-- ./Footer -->
+
+
+<!-------- model-----!-->
+
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"><center> <b style="font-size:30px; color:orange;">You want to book Hostel.?</b> </center></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form method="post"action="{% url 'hostelfound' %}">{% csrf_token %}
+        <input class="form-control" type="text"name="hname" placeholder="Enter your name"required><br>
+          <input class="form-control" type="number" maxlength="10" name="hphone" placeholder="Enter Your Phone Number"required><br>
+          <input class="form-control" type="email" name="hemail" placeholder="Enter Your Email ID."required><br>
+          <input class="form-control" type="text"name="haddress" placeholder="Enter Your Address"required><br>
+          <input class="form-control" type="text" name="htime" placeholder="Enter your duration to hostel you want to Book."required><br>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+        <button type="submit" class="btn btn-primary"name="confirm">Confirm-Book</button>
+           </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-------- model End-----------!-->
+
+<!---second model start--!-->
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle1">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--- this is  the model close for the main section and user can see the own prfiels..--!-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

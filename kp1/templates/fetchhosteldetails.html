@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+ <div class="search-container">
+    <form method="post" action="{{ fetch }}">{% csrf_token %}
+      <input type="text" placeholder="Search.." name="search"required>
+      <button type="submit"><i class="fa fa-search"></i></button>
+
+
+
+    </form>
+     <p> <center> Here it is the  fetch the details of the hostel </center></p>
+
+     {% for i in hostelvalue %}
+        <p> {{i.filename}}</p>
+     {% endfor %}
+  </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+ <style>
+  .jumbotron {
+    background: linear-gradient(to bottom, #800080 0%, #ffc0cb 100%);
+    color: #fff;
+  }
+  .container-fluid{
+  background: linear-gradient(to bottom, #302b63 0%, #24243e 100%);
+  }
+  </style>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"style="color:white;">Welcome: {{username}} </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Your Order</a></li>
+      <li><a href="{{ bookhostel }}">Book-Hostel</a></li>
+        <li><a href="#">Travel</a></li>
+        <li><a href="#">contact</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+    function DoFunc(){
+		if (confirm("Do you want to save changes?") == true) {
+		window.location.replace("http://127.0.0.1:8000/logout");
+
+		} else {
+
+		}
+}
+
+    </script>
+
+      <li><a href="#"onclick="DoFunc()"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+    <div class="jumbotron text-center">
+  <h1>Welcome..</h1>
+        <script>
+
+            alert("Welcome to  your Account..")
+        </script>
+
+  <!----- {% for i in loopvale %}
+
+        <p>{{i.email}}</p>
+        <p>{{i.password}}</p>
+        {% endfor%}
+  <p>FindHostel.com</p> !-->
+
+</div>
+
+<!----- this is the profile of the section for see the  usrer ptoge..-!-->
+
+
+<!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <h5 class="modal-title" id="exampleModalLongTitle"><center><b>User-Profile</b></center></h5>
+          <center><img src="{% static 'images/user.png' %}" alt="Avatar" style="width:70px;height:70px; margin-top:10px;"> </center>
+
+        </button>
+      </div>
+
+      <div class="modal-body">
+
+          <!--- this is the form !-->
+
+          <form>
+          <div class="form-group">
+              <label  class="col-form-label">Name:</label>
+              <input type="text" class="form-control" readonly name="useremail" value="{{ username}}"> </br>
+            <label  class="col-form-label">Email:</label>
+            <input type="text" class="form-control" readonly name="useemail" value="{{ useremail }}">
+              <label  class="col-form-label">Phone-Number:</label></br>
+            <input type="text" class="form-control"readonly name="phone"value= "{{userphone}}">
+          </div>
+
+        </form>
+      </div>
+
+      <div class="modal-footer">
+
+        <button type="button" class="btn btn-danger"data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--- this is  the model close for the main section and user can see the own prfiels..--!-->
+
+
+</body>
+</html>

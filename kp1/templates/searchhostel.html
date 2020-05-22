@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  {% load static %}
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body><style>
+  .jumbotron {
+
+    background: linear-gradient(to bottom, #ad5389 0%, #3c1053 100%);
+    color: #fff;
+  }
+  .mycontainer{
+
+background-color:#ff962d;
+text-color:blue;
+}
+b{
+color:blue;
+
+}
+img{
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+  </style>
+
+
+
+
+
+
+
+
+
+
+
+<div class="jumbotron text-center">
+  <h1>Are You Seraching Hostel.? </h1>
+  <p>Search Here,Hostel Availblity..</p>
+  <form class="form-inline"method="post"action="{% url 'searchhostel' %}">{% csrf_token %}
+    <div class="input-group">
+      <input type="text" class="form-control" size="50" placeholder="Enter Your Location" required>
+      <div class="input-group-btn">
+        <button type="submit" class="btn btn-danger">Search</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="service-list">
+        <div class="container">
+             <div class="row" style="margin-bottom:20px;">
+                 <div class="text3">
+               <center> Services</center>
+                </div>
+               <!---1 !-->
+            <div class="col-sm-4">
+                <center>
+               <img src="{% static 'images/a1.jpg'%}" height="125px" width="125px"style=" border-radius: 50%"data-toggle="modal" data-target="#exampleModalCenter"></center><br/>
+                  <div class="text1">
+                      <center><b>3-star hostel</b></center>
+        </div>
+
+
+                 </div>
+             </div>
+        </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>AdminPannel</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet"href="{% static 'css/sign.css'%}"type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+
+
+body {
+background: #99b433;
+
+}
+
+
+</style>
+<body>
+<div class="login-form">
+    <form method="post"action="{% url 'mylogin.go' %}">{% csrf_token %}
+
+        <h2 class="text-center">Sign in</h2>
+        <div class="form-group">
+        	<div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input type="text" class="form-control" name="email" placeholder="username" required="required">
+            </div>
+        </div>
+		<div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                <input type="password" class="form-control" name="password" placeholder="password" required="required">
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" name="signin"class="btn btn-primary login-btn btn-block">Sign in</button>
+        </div>
+        <div class="clearfix">
+            <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
+            <a href="#" class="pull-right">Forgot Password?</a>
+            <hr>
+
+            <center>  <p id="grant" style="color:red;">  </p> </center>
+
+            </div>
+        </div>
+    </form>
+</div>  <!-------- You should Remebar that alwayes varaible take the insdie the  dubale curly braces and the without the % symbol..--------!-->
+<script>
+
+var b="{{ popup }}";
+
+if(b=='kalka')
+{
+       var audio = new Audio('{% static 'audio/dennied.mp3'%}');
+audio.play();
+alert("Sorry Your Email and Password Are  Wrong. Please Try Again..");
+document.getElementById("grant").innerText="Access Denied";
+
+
+
+}
+
+
+
+</script>
+
+</body>
+</html>
